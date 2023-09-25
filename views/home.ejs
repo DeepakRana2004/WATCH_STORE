@@ -1,0 +1,85 @@
+<%-include('header')%>
+
+<body>
+    <header>
+        <form action="/options" method="post">
+            <h1>Welcome to Watch Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><button type="submit" name="option" value="products">products</button></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </form>
+    </header>
+
+    <form action="/carts" method="post">
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <!-- <%    productsList.forEach(function(products) { %>
+                    <center>
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/SAAHO.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><%=products.name%></h5>
+                              <p class="card-text"><%=products.price%></p>
+                              <button class="btn btn-success" type="submit" name="cart" value="<%=products.name%>">Add to Cart</button>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </center>
+                <%   }) %> -->
+                
+                <center>
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/SAAHO.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">SAAHO</h5>
+                          <p class="card-text">PRICE:7</p>
+                          <button class="btn btn-success" type="submit" name="btn" value="SAAHO">Add to Cart</button>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/SAAHO.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">SAAHO</h5>
+                          <p class="card-text">PRICE:7</p>
+                          <button class="btn btn-success" type="submit" name="cart" value="SAAHO">Add to Cart</button>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+                </center>
+                
+        </section>
+    </form>
+    <section id="home">
+        <h2>Explore Our Collection</h2>
+        <p>Discover a wide range of stylish and elegant watches.</p>
+        <a href="#products" class="cta-button">View Products</a>
+    </section>
+
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a passionate team dedicated to providing high-quality watches that make a statement.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to contact us:</p>
+        <address>
+            Email: <a href="mailto:21eg106b36@anurag.edu.in">21eg106b36@anurag.edu.in</a><br>
+            Phone: +91 8396334242<br>
+            Address: WATCH STREET , HYDERABAD.
+        </address>
+    </section>
+
+<%-include('footer')%>

@@ -7,7 +7,8 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><button type="submit" name="option" value="products">products</button></li>
+                <!-- <li ><button class="link" type="submit" name="option" value="products">products</button></li> -->
+                <li><a href="options">products</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -16,24 +17,8 @@
     </header>
 
     <form action="/carts" method="post">
-        <section id="products">
-            <h2>Our Products</h2>
             <div class="product">
-                <!-- <%    productsList.forEach(function(products) { %>
-                    <center>
-                        <div class="card" style="width: 18rem;">
-                            <img src="images/SAAHO.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title"><%=products.name%></h5>
-                              <p class="card-text"><%=products.price%></p>
-                              <button class="btn btn-success" type="submit" name="cart" value="<%=products.name%>">Add to Cart</button>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                    </center>
-                <%   }) %> -->
-                
+                <h2>Our Products</h2><br>
                 <center>
                     <div class="card" style="width: 18rem;">
                         <img src="images/casualwatch.jpg" class="card-img-top" alt="...">
@@ -44,22 +29,42 @@
                         </div>
                     </div>
                     <br>
-                    <br>
-                    <div class="card" style="width: 18rem;">
-                        <img src="images/smart watch.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">SMART WATCH</h5>
-                          <p class="card-text">PRICE:Rs.3400/-</p>
-                          <button class="btn btn-success" type="submit" name="cart" value="SMART WATCH">Add to Cart</button>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                </div>
                 </center>
-                
-        </section>
+            </div>
     </form>
+    <center>
+        <form action="/options" method="post">
+            <button type="submit" class="btn btn-success" name="option" value="casual-watches">more casual men watches</button>
+        </form>
+    </center>
+    <br>
+    <br>
+    <form action="/carts" method="post">
+        <div class="product">
+            <center>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/smart watch.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">SMART WATCH</h5>
+                      <p class="card-text">PRICE:Rs.3400/-</p>
+                      <button class="btn btn-success" type="submit" name="cart" value="SMART WATCH">Add to Cart</button>
+                    </div>
+                </div>
+                <br>
+            </center>
+        </div>
+    </form>
+    <center>
+        <form action="/options" method="post">
+            <button type="submit" class="btn btn-success" name="option" value="smart-watches">more smart watches</button>
+        </form>
+    </center>
+    <br>
+    <br>
+                
+
+    
+
     <section id="home">
         <h2>Explore Our Collection</h2>
         <p>Discover a wide range of stylish and elegant watches.</p>

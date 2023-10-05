@@ -119,11 +119,20 @@ app.post("/cart-added",function(req,res){
 app.post("/options",function(req,res){
 
   const option=req.body.option;
-
-  if (option==="products"){
-    res.render("products")
+  if (option==="smart-watches"){
+    res.render("smartwatches")
+  }
+  else if(option==="casual-watches"){
+    res.render("casualmenwatches")
   }
 })
+
+
+app.get("/options",function(req,res){
+    res.render("products");
+})
+
+
 
 
 app.post("/order",function(req,res){
@@ -152,3 +161,4 @@ app.post("/ordered",function(req,res){
 
     res.send("<h1>ordered successfully</h1>")
 })
+

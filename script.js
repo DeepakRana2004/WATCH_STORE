@@ -52,8 +52,8 @@ const Cart=mongoose.model("Cart",cartsSchema);
 
 const ordersSchema={
   name:String,
-  age:String,
-  gender:String,
+  phonenumber:String,
+  address:String,
   mail:String,
   itemName:String
 }
@@ -143,16 +143,16 @@ app.post("/order",function(req,res){
 app.post("/ordered",function(req,res){
 
     const name=req.body.name;
-    const age=req.body.age;
-    const gender=req.body.gender;
+    const phonenumber=req.body.phonenumber;
+    const address=req.body.address;
     const mail=req.body.mail;
     const itemName=req.body.btn;
 
 
     const order1=new Order({
       name:name,
-      age:age,
-      gender:gender,
+      phonenumber:phonenumber,
+      address:address,
       mail:mail,
       itemName:itemName
     })
